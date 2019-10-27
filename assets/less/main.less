@@ -1,35 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 body{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
 }
 .header-top{
-    .items-top{
-        .profile-pic{
-            width: 80px;
-            height: 80px;
-            padding: 2px;
-            img{
-                max-width: 100%;
-                border-radius: 100%;
-                border: 2px solid #000;
-            }
-        }
-        .search-form{
-            
-        }
-        .menu-top{
-            align-items: center;
-            display: flex;
-            height: 100%;
-            button{
-                background-color: #fff;
-                border: 0;
-                cursor: pointer;
-                font-size: 22px;
-                &:focus{
-                    outline: 0;
-                }
-            }
-        }
-    }
+	.items-top{
+		background-color: #5dadff;
+		padding: 5px 0;
+		.profile-pic{
+			width: 60px;
+			height: 60px;
+			padding: 2px;
+			img{
+				max-width: 100%;
+				border-radius: 100%;
+				border: 2px solid #fff;
+			}
+		}
+		.search-form{
+			display: none;
+		}
+		.menu-top{
+			align-items: center;
+			display: flex;
+			height: 100%;
+			justify-content: flex-end;
+			button{
+				background-color: transparent;
+				border: 0;
+				cursor: pointer;
+				font-size: 22px;
+				color: #fff;
+				&:focus{
+						outline: 0;
+				}
+			}
+		}
+	}
+}
+.content-page{
+	.itens-content-page{
+		background-color: #bcddff61;
+		padding: 20px 0;
+		.display-friends-suggestion{
+			margin: auto;
+			.friends-suggestion-list{
+				padding: 0 20px;
+				list-style: none;
+				.friend-suggestion{
+					position: relative;
+					display: none;
+					&.active{
+						display: block;
+					}
+					img{
+						max-width: 100%;
+					}
+					.friend-suggestion-nav{
+						position: absolute;
+						text-align: center;
+						min-height: 80px;
+						left: 0;
+						right: 0;
+						top: 0;
+						padding: 10px 0 ;
+						.interested,.uninterested{
+							display: inline-block;
+							border: 0;
+							border-radius: 100%;
+							width: 60px;
+							height: 60px;
+							font-size: 30px;
+							cursor: pointer;
+							position: absolute;
+							&:focus{
+								outline: 0;
+							}
+						}
+						.interested{
+							background-color: #fff;
+							color: #38ff2f;
+							left: 20px;
+						}
+						.uninterested{
+							background-color: #fff;
+							color: tomato;
+							right: 20px;
+						}
+					}
+					.friend-suggestion-info{
+						position: absolute;
+						min-height: 80px;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						color: #fff;
+						text-align: left;
+						padding: 10px 20px;
+						background-color: #00000078;
+						.name{
+							margin: 0;
+							display: inline-block;
+						}
+						.age{
+							display: inline-block;
+							margin-left: 5px;
+						}
+						.address{
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
 }

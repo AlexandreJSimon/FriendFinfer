@@ -1,0 +1,57 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Alexandre Simon",
+            "age": 25,
+            "profile-pic": "alexandre.jpeg",
+            "adress": {
+                "city": "Belo Horizonte",
+                "state": "MG"
+            },
+            "info": ""
+        },
+        {
+            "id": 2,
+            "name": "Thiago Oliveira",
+            "profile-pic": "pp.jpeg",
+            "age": 36,
+            "adress": {
+                "city": "Belo Horizonte",
+                "state": "MG"
+            },
+            "info": ""
+        },
+        {
+            "id": 3,
+            "name": "Rafael",
+            "profile-pic": "rafael.jpeg",
+            "age": 17,
+            "adress": {
+                "city": "Belo Horizonte",
+                "state": "MG"
+            },
+            "info": ""
+        },
+        {
+            "id": 1,
+            "name": "Túlio",
+            "age": 42,
+            "adress": {
+                "city": "Belo Horizonte",
+                "state": "MG"
+            },
+            "info": ""
+        },
+        {
+            "id": 1,
+            "name": "Vitor",
+            "age": 29,
+            "adress": {
+                "city": "Belo Horizonte, Barreiro",
+                "state": "MG"
+            },
+            "info": ""
+        }
+    ]
+}
