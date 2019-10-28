@@ -1,0 +1,22 @@
+{
+  "name": "friendfinfer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "6.11.1"
+  }  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreJSimon/FriendFinfer.git"
+  },
+  "author": "Alexandre Simon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandreJSimon/FriendFinfer/issues"
+  },
+  "homepage": "https://github.com/AlexandreJSimon/FriendFinfer#readme"
+}
