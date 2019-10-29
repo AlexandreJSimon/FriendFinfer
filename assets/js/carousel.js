@@ -174,7 +174,7 @@ class Carousel {
     
   }
   
-  push() {
+  async push() {
     
     let card = document.createElement('li')
     
