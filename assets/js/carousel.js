@@ -186,8 +186,8 @@ class Carousel {
                         <button class="uninterested"><i class="fas fa-times"></i></button>
                       </div>
                       <div class="friend-suggestion-info">
-                        <h2 class="name">Thiago Oliverida</h2>
-                        <span class="age"> 36 anos </span>
+                        <h2 class="name">${await faker_name()}</h2>
+                        <span class="age"> ${Math.floor((Math.random() * 70) + 1)} anos </span>
                         <span class="address"> Belo Horizonte, MG</span>
                       </div>`
 
@@ -197,6 +197,13 @@ class Carousel {
       this.board.append(card)
     }
     
+  }
+  
+  async function faker_name() {
+    const response = await fetch('http://faker.hook.io/?property=name.findName&locale=pt_BR', {});
+    const json = await response.json();
+
+    return json;
   }
   
 }
