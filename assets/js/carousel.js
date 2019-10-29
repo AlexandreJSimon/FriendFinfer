@@ -179,14 +179,14 @@ class Carousel {
     let card = document.createElement('li')
     
     card.classList = 'friend-suggestion active'
-    
+    let faker_name = await this.faker_name()
     card.innerHTML = `<img src="https://picsum.photos/500/500/?random=${Math.round(Math.random()*1000000)}" alt="">
                       <div class="friend-suggestion-nav">
                         <button class="interested"><i class="fas fa-check"></i></button>
                         <button class="uninterested"><i class="fas fa-times"></i></button>
                       </div>
                       <div class="friend-suggestion-info">
-                        <h2 class="name">${await this.faker_name()}</h2>
+                        <h2 class="name">${faker_name}</h2>
                         <span class="age"> ${Math.floor((Math.random() * 70) + 1)} anos </span>
                         <span class="address"> Belo Horizonte, MG</span>
                       </div>`
