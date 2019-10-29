@@ -185,7 +185,7 @@ class Carousel {
                         <button class="uninterested"><i class="fas fa-times"></i></button>
                       </div>
                       <div class="friend-suggestion-info">
-                        <h2 class="name">Thiago Oliverida</h2>
+                        <h2 class="name">${faker.name.findName()}</h2>
                         <span class="age"> ${Math.floor((Math.random() * 45) + 15)} anos </span>
                         <span class="address"> Belo Horizonte, MG</span>
                       </div>`
