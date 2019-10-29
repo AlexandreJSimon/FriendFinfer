@@ -45,13 +45,20 @@ body{
 		padding: 20px 0;
 		.display-friends-suggestion{
 			margin: auto;
+			width: 100%;
+			max-width: 500px;
 			.friends-suggestion-list{
 				padding: 0 20px;
 				list-style: none;
 				position: relative;
-				width: 500px;
-				height: 500px;
+				width: 100%;
 				overflow: hidden;
+				&:before{
+					content: "";
+					display: block;
+					padding-top: 100%;
+					z-index: -1;
+				}
 				.friend-suggestion{
 					position: absolute;
 					display: none;
