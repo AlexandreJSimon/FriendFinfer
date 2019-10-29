@@ -187,7 +187,7 @@ class Carousel {
                       <div class="friend-suggestion-info">
                         <h2 class="name">${faker.name.findName()}</h2>
                         <span class="age"> ${Math.floor((Math.random() * 45) + 15)} anos </span>
-                        <span class="address"> Belo Horizonte, MG</span>
+                        <span class="address"> ${faker.address.city()}, ${faker.address.state()} - ${faker.address.country()}</span>
                       </div>`
 
     if (this.board.firstChild) {
