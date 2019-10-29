@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="assets/libs/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	<script src="assets/js/carousel.js"></script>
 	<script src="https://kit.fontawesome.com/8487278cf2.js" crossorigin="anonymous"></script>
 	<title>Document</title>
 </head>
@@ -40,19 +42,19 @@
 			<div class="row itens-content-page">
 				<div class="display-friends-suggestion">
 					<ul class="friends-suggestion-list">
-						<li class="friend-suggestion active">
+						<!-- <li class="friend-suggestion active">
 							<img src="assets/img/pp.jpeg" alt="">
 							<div class="friend-suggestion-nav">
 								<button class="interested"><i class="fas fa-check"></i></button>
 								<button class="uninterested"><i class="fas fa-times"></i></button>
 							</div>
 							<div class="friend-suggestion-info">
-									<h2 class="name">Thiago Oliverida</h2>
-									<span class="age"> 36 anos </span>
-									<span class="address"> Belo Horizonte, MG</span>
-								</div>
-						</li>
-						<li class="friend-suggestion">
+								<h2 class="name">Thiago Oliverida</h2>
+								<span class="age"> 36 anos </span>
+								<span class="address"> Belo Horizonte, MG</span>
+							</div>
+						</li> -->
+						<!-- <li class="friend-suggestion">
 							<img src="assets/img/rafael.jpeg" alt="">
 						</li>
 						<li class="friend-suggestion">
@@ -60,7 +62,7 @@
 						</li>
 						<li class="friend-suggestion">
 							<img src="assets/img/profile-pic.png" alt="">
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -72,7 +74,8 @@
 		</div>
 	</footer>
 	<script>
-		
+		let board = document.querySelector('.friends-suggestion-list')
+		let carousel = new Carousel(board)
 	</script>
 </body>
 </html>
