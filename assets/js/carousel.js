@@ -177,7 +177,7 @@ class Carousel {
   push() {
     
     let card = document.createElement('li')
-    
+    faker.setLocale("pt_BR");
     card.classList = 'friend-suggestion active'
     card.innerHTML = `<img src="https://picsum.photos/500/500/?random=${Math.round(Math.random()*1000000)}" alt="">
                       <div class="friend-suggestion-nav">
