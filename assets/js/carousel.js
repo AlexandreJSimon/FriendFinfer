@@ -199,7 +199,7 @@ class Carousel {
     
   }
   
-  async function faker_name() {
+  async faker_name() {
     const response = await fetch('http://faker.hook.io/?property=name.findName&locale=pt_BR', {});
     const json = await response.json();
 
