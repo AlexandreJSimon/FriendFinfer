@@ -174,12 +174,12 @@ class Carousel {
     
   }
   
-  push() {
+  async push() {
     
     let card = document.createElement('li')
     
     card.classList = 'friend-suggestion active'
-    let faker_name = this.faker_name()
+    let faker_name = await this.faker_name()
     card.innerHTML = `<img src="https://picsum.photos/500/500/?random=${Math.round(Math.random()*1000000)}" alt="">
                       <div class="friend-suggestion-nav">
                         <button class="interested"><i class="fas fa-check"></i></button>
@@ -187,14 +187,14 @@ class Carousel {
                       </div>
                       <div class="friend-suggestion-info">
                         <h2 class="name">${faker_name}</h2>
-                        <span class="age"> ${Math.floor((Math.random() * 70) + 1)} anos </span>
+                        <span class="age"> ${Math.floor((Math.random() * 45) + 15)} anos </span>
                         <span class="address"> Belo Horizonte, MG</span>
                       </div>`
 
     if (this.board.firstChild) {
-      this.board.insertBefore(card, this.board.firstChild)
+      this.board.insertBefore(await card, this.board.firstChild)
     } else {
-      this.board.append(card)
+      this.board.append(await card)
     }
     
   }
