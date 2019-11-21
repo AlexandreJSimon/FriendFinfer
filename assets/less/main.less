@@ -33,8 +33,35 @@ body{
 				font-size: 22px;
 				color: #fff;
 				&:focus{
-						outline: 0;
+					outline: 0;
 				}
+			}
+		}
+	}
+}
+.nav-top{
+	display: block;
+	ul{
+		height: 50px;
+		margin-top: 0;
+		margin-bottom: 0;
+		background-color: #bcddff;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		box-shadow: 0px 3px 10px -5px rgba(0,0,0,0.5);
+		li{
+			line-height: 30px;
+			padding: 10px 0;
+			color: #fff;
+			font-weight: bold;
+			font-size: 16px;
+			cursor: pointer;
+			&:first-of-type{
+				border-right: 1px solid #fff;
+			}
+			&:last-of-type{
+				border-left: 1px solid #fff;
 			}
 		}
 	}
@@ -43,6 +70,40 @@ body{
 	.itens-content-page{
 		background-color: #bcddff61;
 		padding: 20px 0;
+		.display-events-list{
+			margin: auto;
+			width: 100%;
+			max-width: 500px;
+			padding: 0 15px;
+			ul{
+				display: block;
+				list-style: none;
+				padding: 0;
+				li{
+					display: block;
+					cursor: pointer;
+					color: #777777;
+					padding: 10px 10px;
+					border-bottom: 1px solid #5dadff;
+					font-weight: bold;
+					i{
+						font-size: 30px;
+						border-radius: 100%;
+						border: 2px solid #5dadff;
+						height: 50px;
+						width: 50px;
+						margin-right: 10px;
+						padding: 7px 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.event-single{
+			margin: auto;
+			width: 100%;
+			max-width: 500px;
+		}
 		.display-friends-suggestion{
 			margin: auto;
 			width: 100%;

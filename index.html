@@ -38,33 +38,35 @@
 			</div>
 		</div>
 	</header>
+	<nav class="nav-top">
+		<div class="container">
+			<ul class="row">
+				<li class="col-4" onclick="loadHome()">Inicio</li>
+				<li class="col-4">Amigos</li>
+				<li class="col-4" onclick="loadEvents()">Eventos</li>
+			</ul>
+		</div>
+	</nav>
 	<main class="content-page">
 		<div class="container">
 			<div class="row itens-content-page">
 				<div class="display-friends-suggestion">
 					<ul class="friends-suggestion-list">
-						<!-- <li class="friend-suggestion active">
-							<img src="assets/img/pp.jpeg" alt="">
-							<div class="friend-suggestion-nav">
-								<button class="interested"><i class="fas fa-check"></i></button>
-								<button class="uninterested"><i class="fas fa-times"></i></button>
-							</div>
-							<div class="friend-suggestion-info">
-								<h2 class="name">Thiago Oliverida</h2>
-								<span class="age"> 36 anos </span>
-								<span class="address"> Belo Horizonte, MG</span>
-							</div>
-						</li> -->
-						<!-- <li class="friend-suggestion">
-							<img src="assets/img/rafael.jpeg" alt="">
-						</li>
-						<li class="friend-suggestion">
-							<img src="assets/img/tulio.jpeg" alt="">
-						</li>
-						<li class="friend-suggestion">
-							<img src="assets/img/profile-pic.png" alt="">
-						</li> -->
+
 					</ul>
+				</div>
+				<div class="display-events-list" style="display: none;">
+					<ul>
+						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 1</li>
+						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 2</li>
+						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 3</li>
+						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 4</li>
+						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 5</li>
+					</ul>
+				</div>
+				<div class="event-single" style="display: none;">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.802939879144!2d-43.93820574788514!3d-19.93270730164976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699dc336346fb%3A0x6cd7a529d18b722b!2sPra%C3%A7a%20da%20Liberdade!5e0!3m2!1spt-BR!2sbr!4v1574300979334!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+						</iframe>
 				</div>
 			</div>
 		</div>
@@ -77,6 +79,39 @@
 	<script>
 		let board = document.querySelector('.friends-suggestion-list')
 		let carousel = new Carousel(board)
+
+
+		function loadHome(){
+			displayNoneElements('home')
+		}
+
+		function loadEvents(){
+			displayNoneElements('events')
+		}
+
+		function loadSingleEvent(){
+			displayNoneElements('single')
+		}
+
+
+		function displayNoneElements(visiblePage){
+			let home = document.querySelector('.display-friends-suggestion')
+			let evemts = document.querySelector('.display-events-list')
+			let singleEvents = document.querySelector('.event-single')
+
+			home.style.display = 'none'
+			evemts.style.display = 'none'
+			singleEvents.style.display = 'none'
+
+			if(visiblePage == 'home'){
+				home.style.display = 'block'
+			}else if(visiblePage == 'events'){
+				evemts.style.display = 'block'
+			}else{
+				singleEvents.style.display = 'block'
+			}
+		}
+
 	</script>
 </body>
 </html>
