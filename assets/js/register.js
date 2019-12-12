@@ -16,7 +16,7 @@ class Register {
 
 
     showPerfil(){
-        let ev = JSON.parse(localStorage.getItem("friendData"))
+        let ev = JSON.parse(localStorage.getItem("perfilData"))
         return ev[0]
     }
 
