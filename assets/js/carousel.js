@@ -4,6 +4,7 @@ class Carousel {
   constructor(element) {
     
     this.board = element
+    this.friend = new Friend()
     
     // add first two cards programmatically
     this.push()
@@ -70,7 +71,7 @@ class Carousel {
   }
   
   onPan(e) {
-    
+    let left = false
     if (!this.isPanning) {
       
       this.isPanning = true
@@ -134,7 +135,7 @@ class Carousel {
         posX = this.board.clientWidth
       
       } else if (propX < -0.25 && e.direction == Hammer.DIRECTION_LEFT) {
-    
+        left = true
         successful = true
         // get left border position
         posX = - (this.board.clientWidth + this.topCard.clientWidth)
@@ -148,7 +149,15 @@ class Carousel {
       }
       
       if (successful) {
-  
+        if(left){
+          let image = this.topCard.getElementsByTagName('img')[0].src
+          let name = this.topCard.querySelector('.name').innerHTML
+          let age = this.topCard.querySelector('.age').innerHTML
+          let address = this.topCard.querySelector('.address').innerHTML
+
+          this.friend.addFriends({image: image, name: name, age: age, address: address})
+
+        }
         // throw card in the chosen direction
         this.topCard.style.transform = 'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
       

@@ -19,6 +19,44 @@ body{
 	margin: auto;
 	cursor: pointer;
 }
+.register-form{
+	.form-page{
+		h1{
+			color: #5cacff;
+			border: 2px solid #5cacff;
+			padding: 5px 15px;
+			display: inline-block;
+			background-color: #fff;
+			margin-bottom: 0;
+		}
+		h2,h3{
+			color: #909090;
+		}
+		background-color: #bcddff61;
+		padding: 20px 0;
+		height: 470px;
+		text-align: center;
+		width: 100%;
+		input,button{
+			display: inline-block;
+			height: 40px;
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			border: 0;
+			background: transparent;
+			border-bottom: 2px solid #5cadff;
+			&:focus{
+				outline: none;
+			}
+		}
+		button{
+			height: 35px;
+			border: 2px solid #5cadff;
+			cursor: pointer;
+		}
+	}
+}
 .header-top{
 	.items-top{
 		background-color: #5dadff;
@@ -85,7 +123,7 @@ body{
 	.itens-content-page{
 		background-color: #bcddff61;
 		padding: 20px 0;
-		.display-events-list{
+		.display-events-list, .display-friends-list{
 			margin: auto;
 			width: 100%;
 			max-width: 500px;
@@ -106,8 +144,12 @@ body{
 						display: block;
 						position: relative;
 						z-index: 1;
+						b{
+							position: relative;
+    						bottom: 15px;
+						}
 					}
-					i{
+					i,img{
 						font-size: 30px;
 						border-radius: 100%;
 						border: 2px solid #5dadff;
@@ -116,6 +158,9 @@ body{
 						margin-right: 10px;
 						padding: 7px 0;
 						text-align: center;
+					}
+					img{
+						padding: 0;
 					}
 					button{
 						position: absolute;

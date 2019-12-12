@@ -8,103 +8,147 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script src="https://cdn.rawgit.com/Marak/faker.js/master/examples/browser/js/faker.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-	<script src="assets/js/carousel.js"></script>
 	<script src="assets/js/events.js"></script>
+	<script src="assets/js/friends.js"></script>
+	<script src="assets/js/register.js"></script>
+	<script src="assets/js/carousel.js"></script>
 	<script src="https://kit.fontawesome.com/8487278cf2.js" crossorigin="anonymous"></script>
 	<title>Document</title>
 </head>
 <body>
-	<header class="header-top">
+	<div class="register-form" style="display: none;">
 		<div class="container">
-			<div class="items-top row">
-				<div class="col col-md-4">
-					<div class="profile-pic">
-						<img src="assets/img/alexandre.jpeg" alt="">
-					</div> 
+			<div class="form-page">
+				<h1>Friend FinFer</h1>
+				<h2>Bem vindo ao Friend Finfer</h2>
+				<h3>Insira seus dados para fazer novas amizades</h3>
+				<div class="col-md-12">
+					<input type="text" id="name" placeholder="Nome">
 				</div>
-				<div class="col col-md-4">
-					<div class="search-form">
-						<button>
-							<i class="fas fa-search"></i>
-						</button>
+				<div class="col-md-12">
+					<input type="text" id="email" placeholder="Email">
+				</div>
+				<div class="col-md-12">
+					<input type="text" id="phone" placeholder="Telefone">
+				</div>
+				<button onclick="reg()">Registrar</button>
+			</div>
+		</div>
+	</div>
+	<div class="app-body" style="display: none;">
+		<header class="header-top">
+			<div class="container">
+				<div class="items-top row">
+					<div class="col col-md-4">
+						<div class="profile-pic">
+							<img src="assets/img/alexandre.jpeg" alt="">
+						</div> 
 					</div>
-				</div>
-				<div class="col col-md-4">
-					<div class="menu-top">
-						<button>
-							<i class="fas fa-ellipsis-v"></i>
-						</button>
+					<div class="col col-md-4">
+						<div class="search-form">
+							<button>
+								<i class="fas fa-search"></i>
+							</button>
+						</div>
+					</div>
+					<div class="col col-md-4">
+						<div class="menu-top">
+							<button>
+								<i class="fas fa-ellipsis-v"></i>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<nav class="nav-top">
-		<div class="container">
-			<ul class="row">
-				<li class="col-4" onclick="loadHome()">Inicio</li>
-				<li class="col-4">Amigos</li>
-				<li class="col-4" onclick="loadEvents()">Eventos</li>
-			</ul>
-		</div>
-	</nav>
-	<main class="content-page">
-		<div class="container">
-			<div class="row itens-content-page">
-				<div class="display-friends-suggestion">
-					<ul class="friends-suggestion-list">
+		</header>
+		<nav class="nav-top">
+			<div class="container">
+				<ul class="row">
+					<li class="col-4" onclick="loadHome()">Inicio</li>
+					<li class="col-4" onclick="loadFriends()">Amigos</li>
+					<li class="col-4" onclick="loadEvents()">Eventos</li>
+				</ul>
+			</div>
+		</nav>
+		<main class="content-page">
+			<div class="container">
+				<div class="row itens-content-page">
+					<div class="display-friends-suggestion">
+						<ul class="friends-suggestion-list">
 
-					</ul>
-				</div>
-				<div class="display-events-list" style="display: none;">
-					<ul>
-						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 1</li>
-						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 2</li>
-						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 3</li>
-						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 4</li>
-						<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 5</li>
-					</ul>
-					<footer>
-						<button class="btn-add" onclick="loadAddvent()"><i class="fas fa-plus"></i></button>
-					</footer>
-				</div>
-				<div class="event-add" style="display: none;">
-					<div class="col-md-12">
-						<input type="text" id="title" placeholder="Nome do evento">
+						</ul>
 					</div>
-					<div class="col-md-12">
-						<input type="text" id="location" placeholder="Local do evento">
+					<div class="display-friends-list" style="display: none;">
+						<ul>
+
+						</ul>
 					</div>
-					<button onclick="addEvento()">Add Evento</button>
-				</div>
-				<div class="event-single" style="display: none;">
-						<iframe
-						width="100%"
-						height="450"
-						frameborder="0" style="border:0"
-						src="" allowfullscreen>
-					  </iframe>
+					<div class="display-events-list" style="display: none;">
+						<ul>
+							<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 1</li>
+							<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 2</li>
+							<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 3</li>
+							<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 4</li>
+							<li onclick="loadSingleEvent()"><i class="fas fa-users"></i>Evento 5</li>
+						</ul>
+						<footer>
+							<button class="btn-add" onclick="loadAddvent()"><i class="fas fa-plus"></i></button>
+						</footer>
+					</div>
+					<div class="event-add" style="display: none;">
+						<div class="col-md-12">
+							<input type="text" id="title" placeholder="Nome do evento">
+						</div>
+						<div class="col-md-12">
+							<input type="text" id="location" placeholder="Local do evento">
+						</div>
+						<button onclick="addEvento()">Add Evento</button>
+					</div>
+					<div class="event-single" style="display: none;">
+							<iframe
+							width="100%"
+							height="450"
+							frameborder="0" style="border:0"
+							src="" allowfullscreen>
+						</iframe>
+					</div>
 				</div>
 			</div>
-		</div>
-	</main>
-	<footer>
-		<div class="container">
+		</main>
+		<footer>
+			<div class="container">
 
-		</div>
-	</footer>
+			</div>
+		</footer>
+	</div>
 	<script>
 		let board = document.querySelector('.friends-suggestion-list')
 		let carousel = new Carousel(board)
 		let events = new Event()
+		let friends = new Friend()
+		let register = new Register()
+
+		if(register.isRegistred()){
+			document.querySelector('.app-body').style.display = 'block'
+			profile = register.showPerfil()
+			document.querySelector('.profile-pic img').src = 'https://picsum.photos/500/500/?random='+profile.image
+		}else{
+			document.querySelector('.register-form').style.display = 'block'
+		}
 
 		function loadHome(){
 			displayNoneElements('home')
 		}
 
+		function loadFriends(){
+			displayNoneElements('friends')
+			let el = document.querySelector('.display-friends-list ul')
+			friends.loadFriends(el);
+		}
+
 		function loadEvents(){
 			displayNoneElements('events')
-			el = document.querySelector('.display-events-list ul')
+			let el = document.querySelector('.display-events-list ul')
 			events.loadEvents(el);
 		}
 
@@ -132,16 +176,23 @@
 			loadEvents()
 		}
 
+		function removeFriend(id){
+			friends.removeFriend(id)
+			loadFriends()
+		}
+
 		function displayNoneElements(visiblePage){
 			let home = document.querySelector('.display-friends-suggestion')
 			let evemts = document.querySelector('.display-events-list')
 			let singleEvents = document.querySelector('.event-single')
 			let eventAdd = document.querySelector('.event-add')
+			let friends = document.querySelector('.display-friends-list')
 
 			home.style.display = 'none'
 			evemts.style.display = 'none'
 			singleEvents.style.display = 'none'
 			eventAdd.style.display = 'none'
+			friends.style.display = 'none'
 
 			if(visiblePage == 'home'){
 				home.style.display = 'block'
@@ -149,9 +200,20 @@
 				evemts.style.display = 'block'
 			}else if(visiblePage == 'single'){
 				singleEvents.style.display = 'block'
-			}else{
+			}else if(visiblePage == 'add-event'){
 				eventAdd.style.display = 'block'
+			}else{
+				friends.style.display = 'block'
 			}
+		}
+
+		function reg(){
+			let name = document.getElementById('name').value
+			let email = document.getElementById('email').value
+			let phone = document.getElementById('phone').value
+			register.register({name: name, email: email, phone: phone, image: Math.round(Math.random()*1000000)})
+			location.reload();
+
 		}
 
 	</script>
